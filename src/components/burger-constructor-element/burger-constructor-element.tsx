@@ -1,8 +1,12 @@
 import { FC, memo } from 'react';
 import { BurgerConstructorElementUI } from '@ui';
 import { BurgerConstructorElementProps } from './type';
-import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch, RootState } from '../../services/store';
+import {
+  AppDispatch,
+  RootState,
+  useDispatch,
+  useSelector
+} from '../../services/store';
 import { deleteItem, updateAll } from '../../slices/burgerConstructor';
 import { TConstructorIngredient } from '@utils-types';
 
@@ -19,7 +23,7 @@ const moveItem = (
 
 export const BurgerConstructorElement: FC<BurgerConstructorElementProps> = memo(
   ({ ingredient, index, totalItems }) => {
-    const dispatch = useDispatch<AppDispatch>();
+    const dispatch = useDispatch();
     const { ingredients } = useSelector(
       (store: RootState) => store.burgerConstructor
     );

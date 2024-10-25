@@ -16,7 +16,7 @@ const initialState: IngredientState = {
 
 export const getInridientsThunk = createAsyncThunk(
   'ingredients/get',
-  async () => getIngredientsApi()
+  getIngredientsApi
 );
 
 export const ingridientsSlice = createSlice({

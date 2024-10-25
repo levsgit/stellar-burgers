@@ -14,10 +14,7 @@ const initialState: NewOrderState = {
   error: null
 };
 
-export const newOrderThunk = createAsyncThunk(
-  'order/create',
-  async (data: string[]) => orderBurgerApi(data)
-);
+export const newOrderThunk = createAsyncThunk('order/create', orderBurgerApi);
 
 export const newOrderSlice = createSlice({
   name: 'newOrder',

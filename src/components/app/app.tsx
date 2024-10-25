@@ -12,24 +12,17 @@ import {
 
 import '../../index.css';
 import styles from './app.module.css';
-import {
-  Routes,
-  Route,
-  BrowserRouter,
-  useLocation,
-  useNavigate
-} from 'react-router-dom';
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 
 import { AppHeader, IngredientDetails, Modal, OrderInfo } from '@components';
 import { ProtectedRoute } from '../ProtectedRoute';
-import { Provider, useDispatch } from 'react-redux';
-import store, { AppDispatch } from '../../services/store';
 import { useEffect } from 'react';
 import { getUserThunk } from '../../slices/userSlice';
 import { getInridientsThunk } from '../../slices/ingredientsSlice';
+import { useDispatch } from '../../services/store';
 
 const App = () => {
-  const dispatch = useDispatch<AppDispatch>();
+  const dispatch = useDispatch();
   const location = useLocation();
   const navigate = useNavigate();
   const backgroundLocation = location.state?.backgroundLocation;

@@ -18,9 +18,7 @@ const initialState: FeedsState = {
   error: undefined
 };
 
-export const getFeedsThunk = createAsyncThunk('orders/getAll', async () =>
-  getFeedsApi()
-);
+export const getFeedsThunk = createAsyncThunk('orders/getAll', getFeedsApi);
 
 export const feedsSlice = createSlice({
   name: 'feeds',

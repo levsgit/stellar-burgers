@@ -28,28 +28,18 @@ const initialState: UserState = {
   error: ''
 };
 
-export const getUserThunk = createAsyncThunk('user/auth', async () =>
-  getUserApi()
-);
+export const getUserThunk = createAsyncThunk('user/auth', getUserApi);
 
 export const registrationUserThunk = createAsyncThunk(
   'user/register',
-  async (data: TRegisterData) => registerUserApi(data)
+  registerUserApi
 );
 
-export const loginUserThunk = createAsyncThunk(
-  'user/login',
-  async (data: TLoginData) => loginUserApi(data)
-);
+export const loginUserThunk = createAsyncThunk('user/login', loginUserApi);
 
-export const logoutUserThunk = createAsyncThunk('user/logout', async () =>
-  logoutApi()
-);
+export const logoutUserThunk = createAsyncThunk('user/logout', logoutApi);
 
-export const updateUserThunk = createAsyncThunk(
-  'user/update',
-  async (data: TRegisterData) => updateUserApi(data)
-);
+export const updateUserThunk = createAsyncThunk('user/update', updateUserApi);
 
 export const userSlice = createSlice({
   name: 'user',
