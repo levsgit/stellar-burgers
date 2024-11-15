@@ -25,7 +25,7 @@ const App = () => {
   const dispatch = useDispatch();
   const location = useLocation();
   const navigate = useNavigate();
-  const backgroundLocation = location.state?.backgroundLocation;
+  const backgroundLocation = location.state?.background;
 
   const getNumberFromPath = (path: string) => {
     const match = path.match(/\/(\d+)$/);
