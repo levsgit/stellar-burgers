@@ -18,18 +18,18 @@ describe('Тестирование функции оформления зака�
 
   it('оформление заказа', () => {
     cy.get('h3')
-    .contains('Булки')
-    .next('ul')
-    .find('button.common_button')
-    .first()
-    .click();
+      .contains('Булки')
+      .next('ul')
+      .find('button.common_button')
+      .first()
+      .click();
 
-  cy.get('h3')
-    .contains('Начинки')
-    .next('ul')
-    .find('button.common_button')
-    .first()
-    .click();
+    cy.get('h3')
+      .contains('Начинки')
+      .next('ul')
+      .find('button.common_button')
+      .first()
+      .click();
 
     const orderButton = cy.get('[data-cy=order-button]');
     orderButton.contains('Оформить заказ').click();
