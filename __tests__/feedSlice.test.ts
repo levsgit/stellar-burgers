@@ -1,15 +1,7 @@
-import { initialState as FeedsState, getFeedsThunk, feedsSlice } from '../src/slices/feedSlice';
+import { getFeedsThunk, feedsSlice, initialState } from '../src/slices/feedSlice';
 import { describe, expect, test } from '@jest/globals';
 
 describe('Тесты редьюсера feedSlice', () => {
-  const initialState: typeof FeedsState = {
-    orders: [],
-    total: 0,
-    totalToday: 0,
-    isLoading: true,
-    error: undefined
-  };
-
   const expectedResult = {
     orders: [
       {

@@ -8,7 +8,7 @@ describe('Тестирование функции оформления зака�
     window.localStorage.setItem('refreshToken', 'test');
     cy.setCookie('accessToken', JSON.stringify('test'));
 
-    cy.visit('http://localhost:4000/');
+    cy.visit('/');
   });
 
   afterEach(() => {

@@ -1,13 +1,7 @@
-import { initialState as IngredientsState, getInridientsThunk, ingridientsSlice } from '../src/slices/ingredientsSlice';
+import { initialState, getInridientsThunk, ingridientsSlice } from '../src/slices/ingredientsSlice';
 import { describe, expect, test } from '@jest/globals';
 
 describe('Тесты редьюсера ingridientsSlice', () => {
-  const initialState: typeof IngredientsState = {
-    ingredients: [],
-    isLoading: false,
-    error: null
-  };
-
   const expectedResult = [
     {
       _id: '1',

@@ -3,7 +3,7 @@ describe('Проверка работы модальных окон', () => {
     cy.intercept('GET', 'api/ingredients', { fixture: 'ingredients.json' });
     cy.intercept('GET', 'api/auth/user', { fixture: 'user.json' });
     cy.viewport(1300, 800);
-    cy.visit('http://localhost:4000/');
+    cy.visit('/');
   });
 
   it('Открытие модалки игредиента', () => {

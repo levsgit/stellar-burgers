@@ -1,12 +1,7 @@
-import { initialState as OrdersState, getOrdersThunk, ordersSlice } from '../src/slices/orderSlice';
+import { initialState, getOrdersThunk, ordersSlice } from '../src/slices/orderSlice';
 import { describe, expect, test } from '@jest/globals';
 
 describe('Тесты редьюсера ordersSlice', () => {
-  const initialState: typeof OrdersState = {
-    orders: [],
-    isLoading: true
-  };
-
   const expectedOrders = [
     {
       _id: 'order123',

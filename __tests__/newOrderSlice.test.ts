@@ -1,13 +1,7 @@
-import { initialState as NewOrderState, newOrderThunk, newOrderSlice } from '../src/slices/newOrderSlice';
+import { initialState, newOrderThunk, newOrderSlice } from '../src/slices/newOrderSlice';
 import { describe, expect, test } from '@jest/globals';
 
 describe('Тесты редьюсера newOrderSlice', () => {
-  const initialState: typeof NewOrderState = {
-    request: false,
-    orderData: null,
-    error: null
-  };
-
   const expectedOrder = {
     _id: 'order123',
     ingredients: ['ingredient1', 'ingredient2'],

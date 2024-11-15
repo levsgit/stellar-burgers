@@ -4,17 +4,13 @@ import {
   addItem,
   deleteItem,
   updateAll,
+  initialState,
 } from '../src/slices/burgerConstructor';
 import { TConstructorIngredient } from '../src/utils/types'
 
 const { reducer } = burgerConstructorSlice;
 
 describe('Тесты редьюсера burgerConstructorSlice', () => {
-  const initialState = {
-    bun: null,
-    ingredients: [],
-  };
-
   const ingredient1 = {
     _id: '643d69a5c3f7b9001cfa093d',
     name: 'Флюоресцентная булка R2-D3',

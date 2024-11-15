@@ -1,17 +1,7 @@
-import { initialState as UserState, getUserThunk, loginUserThunk, logoutUserThunk, registrationUserThunk, updateUserThunk, userSlice } from '../src/slices/userSlice';
+import { initialState, getUserThunk, loginUserThunk, logoutUserThunk, registrationUserThunk, updateUserThunk, userSlice } from '../src/slices/userSlice';
 import { describe, expect, test } from '@jest/globals';
 
 describe('Тесты редьюсера userSlice', () => {
-  const initialState: typeof UserState = {
-    isInit: false,
-    isLoading: false,
-    user: {
-      email: '',
-      name: ''
-    },
-    error: ''
-  };
-
   const userData = {
     email:"aloisovich@yandex.ru",
     name:"Адольф"
